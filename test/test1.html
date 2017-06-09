@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css" >
+	<link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui-error.css" >
+    <style>
+        img { width: 100%;}
+    </style>
+</head>
+
+<body>
+	<script type="text/javascript" src="../dist/fast-console.js"></script>
+    <p>this is a long text; long long long  long long long  long long long  long long long  long long long  long long long  long long long  long long long </p>
+	<div id="test-html">
+		<span>this is a something text</span>
+	</div>
+    <ul>
+        <li>this is a list item</li>
+    </ul>
+    
+	<img src="./images/aa.png" width='100px' />
+    <img src="http://pic.90sjimg.com/back_pic/u/00/38/54/05/55fcf00fecd99.jpg">
+
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/core.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/core-error.js"></script>
+	<script>
+        // test conosle
+		setTimeout(function() {
+
+            var c;
+			console.log('logggggggggggg');
+			console.info({a: 'bb'});
+            console.log(document.getElementById('test-html'));
+			console.log(true, 123);
+            console.warn(c);
+			var b = a;
+		}, 300)
+        // test xhr
+		function test() {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", "https://api.github.com/users/miaowwwww", true);
+			xmlhttp.send();
+
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("POST", "https://api.github.com/users/miaowwwww", true);
+			xmlhttp.send(JSON.stringify({ name: 'guodequan' }));
+
+		}
+		setTimeout(function() {
+
+			test()
+		}, 300)
+	</script>
+</body>
+
+</html>
